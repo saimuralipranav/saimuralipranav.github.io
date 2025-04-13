@@ -1,144 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="" eng ">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <meta charset=" UTF-8 ">
+    <meta name=" viewport " content=" width=device-width , initial-scale=1.0 ">
+    <title>Sai Murali Pranav - Personal Website</title>
     <style>
+        @keyframes slideleft{
+            from{
+                transform: translateX(40px);
+                opacity:0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity:1;
+            }
+        }
+        @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            background:skyblue;
+            color:black;
+            line-height: 2;
         }
-        
-        header {
-            text-align: center;
-            margin-bottom: 30px;
+        header{
+            text-align:center;
+            padding:10px;
+            animation:fadeIn 1.5s;
         }
-        
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+        .profile-pic{
+            width: 150px;height: 150px;border-radius:20%;
             object-fit: cover;
+            border: 4px solid lavender;
+            transition: all 0.5s ease;
+            margin-bottom: 0%;
         }
-        
-        section {
-            margin-bottom: 30px;
+        .profile-pic:hover {
+            transform: scale(1.1);
+            border-color: pink;
         }
-        
-        h1,
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(180deg, darkblue, red);
+            background-clip: text;
+            color: transparent;
+            margin-top: 0%; margin-bottom: 0%;
+        }
         h2 {
-            color: #2c3e50;
+            font-size: 2.3rem;
+            background: linear-gradient(0deg, blue, red);
+            background-clip: text;
+            color: transparent;
+            animation:slideleft 1s ease;
         }
-        
+        .tagline{
+            font-size: 1.5rem;
+            color: darkblue;
+            margin-top: 0%;
+        }
+        section {
+            padding: 2rem;
+            background: rgb(232, 190, 225);
+            border-radius:40px;
+            animation: slideUp 0.8s ease;
+            margin-top: 0%; margin-bottom: 5%;
+        }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 3rem;
         }
-        
         .gallery img {
-            width: 150px;
-            height: 150px;
+            width: 200px; height: 150px;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 10px;
         }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        .timeline{
+            animation:slideleft 1s ease;
         }
-        
-        .skill {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 5px;
+        h3{
+            font-size: 1.5rem;
+            background: linear-gradient(180deg, darkblue, rgb(44, 173, 224));
+            background-clip: text;
+            color: transparent;
+            animation:slideleft 1s ease;
         }
-        
-        .expert {
-            background-color: #d4edda;
+        .CV{
+            display: inline-block;
+            transition: transform 0.3s ease;
         }
-        
-        .intermediate {
-            background-color: #fff3cd;
-        }
-        
-        .beginner {
-            background-color: #f8d7da;
+        .CV:hover{
+            transform:scale(1.2);
         }
     </style>
 </head>
 
 <body>
+    <div class=" whole-container ">
     <header>
-        <!-- Replace with your profile picture -->
-        <img src="profile.jpg" alt="Your Name" class="profile-pic">
-        <h1>Your Name</h1>
-        <p>Your Professional Tagline</p>
+        <img src=" profile.jpg " alt=" Sai Murali Pranav " class=" profile-pic ">
+        <h1>Sai Murali Pranav</h1>
+        <p class=" tagline ">student</p>
     </header>
-
-    <section id="about">
+    <section id="about ">
         <h2>About Me</h2>
-        <!-- Replace with your about paragraph -->
-        <p>
-            [Write a paragraph about yourself here. Include your professional interests, personal values, and what motivates you. For example: "I am a passionate computer science student with a keen interest in web development and artificial intelligence. I enjoy
-            solving complex problems and creating innovative solutions that make a difference in people's lives. When I'm not coding, you can find me hiking in nature or reading science fiction novels."]
-        </p>
+        <p>a paragraph about me</p>
     </section>
-
-    <section id="hometown">
-        <h2>My Hometown</h2>
-        <div class="gallery">
-            <!-- Replace with your local pictures -->
-            <img src="hometown1.jpg" alt="Hometown scene 1">
-            <img src="hometown2.jpg" alt="Hometown scene 2">
-            <img src="hometown3.jpg" alt="Hometown scene 3">
+    <section id=" hometown ">
+        <h2>My Hometown Gallery</h2>
+        <div class="gallery ">
+            <img src="1.jpg " alt=" 1 ">
+            <img src="2.jpg " alt=" 2 ">
         </div>
-        <p>[Optional: Write a brief description about your birthplace]</p>
     </section>
-
-    <section id="education">
+    <section id="education ">
         <h2>Education</h2>
-        <!-- Replace with your education details -->
-        <h3>Current University/School</h3>
-        <p>Degree Program, Year Started - Expected Graduation</p>
-        <p>Achievements: [List any honors, awards, or notable achievements]</p>
-
-        <h3>Previous School</h3>
-        <p>Years Attended, Major/Program</p>
-        <p>Achievements: [List any honors, awards, or notable achievements]</p>
+        <ul class="timeline ">
+            <li class="timeline-item ">
+                <div class="timeline-anim ">
+                    <h3>IIIT Hyderabad</h3>
+                    <ul>
+                        <li>2024-Prenest</li>
+                        <li>CND</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="timeline-item ">
+                <div class="timeline-anim ">
+                    <h3>Narayana Junior College</h3>
+                    <ul>
+                        <li>2022-2024</li>
+                        <li>Intermediate</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="timeline-item ">
+                <div class="timeline-anim ">
+                    <h3>St. Ann's High School</h3>
+                    <ul>
+                        <li>2012-2022</li>
+                        <li>2nd-10th standard</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="timeline-item ">
+                <div class="timeline-anim ">
+                    <h3>St. Ann's High School</h3>
+                    <ul>
+                        <li>2011-2012</li>
+                        <li>1st standard</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="timeline-item ">
+                <div class="timeline-anim ">
+                    <h3>Shogi Primary School</h3>
+                    <ul>
+                        <li>2009-2011</li>
+                        <li>Kinder-Garten</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills">
-            <!-- Replace with your skills and expertise levels -->
-            <div class="skill expert">HTML</div>
-            <div class="skill expert">CSS</div>
-            <div class="skill intermediate">JavaScript</div>
-            <div class="skill intermediate">Python</div>
-            <div class="skill beginner">Java</div>
-            <!-- Add more skills as needed -->
+    <section id=" skills ">
+        <h2>Skills</h2>
+        <div class=" skills ">
+            <div class="skill ">HTML/CSS</div>
+            <div class="skill ">C/Python</div>
+            <div class="skill ">SQL</div>
+            <div class="skill ">NoSQL</div>
         </div>
     </section>
-
-    <section id="cv">
+    <section id=" cv ">
         <h2>Curriculum Vitae</h2>
-        <p>
-            <!-- Replace with your actual CV file -->
-            Download my complete CV: <a href="your-cv.pdf" target="_blank">PDF Version</a>
-        </p>
+        <a href=" cv.pdf " class="CV " target="_blank ">Download CV</a>
     </section>
-
-    <footer>
-        <p>© 2023 Your Name. All rights reserved.</p>
-    </footer>
+    <footer>VERIFIED BY SAI MURALI PRANAV</footer>
+    </div>
 </body>
+
 
 </html>
